@@ -1,3 +1,3 @@
 # Blogs/Wikis
 
-https://github.com/thobanimadonsela/blogs/wiki
+* [Wikis](https://github.com/thobanimadonsela/blogs/wiki)
