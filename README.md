@@ -1,3 +1,3 @@
-# Blogs/Wikis
+# Python
 
-* [Python Resources](https://github.com/thobanimadonsela/blogs/wiki/Python-Reads)
+* [Resources](https://github.com/thobanimadonsela/blogs/wiki/Python-Reads)
