@@ -27,8 +27,9 @@ docker pull jaegertracing/all-in-one:latest
 ## Example
 
 ```python
-    run_config = context.get_settings().get("name", None)
-    if run_config and run_config == "local":
+def attach_debug_trace(context):
+    attach_debug_trace = context.get_settings().get("attach_debug_trace", False)
+    if attach_debug_trace:
         # Configure the tracer provider
         trace.set_tracer_provider(TracerProvider(resource=Resource.create({SERVICE_NAME: context.title})))
 
@@ -42,6 +43,5 @@ docker pull jaegertracing/all-in-one:latest
         span_processor = BatchSpanProcessor(jaeger_exporter)
         trace.get_tracer_provider().add_span_processor(span_processor)
 
-    otel.instrument_fastapi_app(app)
 
 ```
