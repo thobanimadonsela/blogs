@@ -43,5 +43,7 @@ def attach_debug_trace(context):
         span_processor = BatchSpanProcessor(jaeger_exporter)
         trace.get_tracer_provider().add_span_processor(span_processor)
 
-
 ```
+
+## View Traces
+- http://localhost:16686/search
