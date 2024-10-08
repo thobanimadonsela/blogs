@@ -28,7 +28,7 @@ docker pull jaegertracing/all-in-one:latest
 
 ```python
 def attach_debug_trace(context):
-    attach_debug_trace = context.get_settings().get("attach_debug_trace", False)
+    attach_debug_trace = context.get_settings().get("attach_debug_trace", False) # Flip the switch in settings
     if attach_debug_trace:
         # Configure the tracer provider
         trace.set_tracer_provider(TracerProvider(resource=Resource.create({SERVICE_NAME: context.title})))
